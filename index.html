@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honird Agency | Business Marketing Agency</title>
+    <link rel="stylesheet" href="Styles/general.css">
+    <link rel="stylesheet" href="Styles/header.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="images/honird-logo.png" alt="logo" height="40px"></a>
+        </div>
+        <div class="hamburger__menu" id="hamburger-menu" onclick="showMenu()">
+           <img src="images/icons/hamburger-menu.png" alt="hamburger-menu"> 
+        </div>
+        <div class="hamburger__close" id="hamburger-close" onclick="hideMenu()">
+           <img src="images/icons/menu-unfold-2-line.png" alt="hamburger-close"> 
+        </div>
+        <nav id="nav__bar">
+            <ul  class="nav__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Clients</a></li>
+                <li class="contact__btn"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="section__container">
+        <div class="modal"></div>
+        <div class="content__container">
+            <div class="hero__text">
+                <h1 class="heading">Make your <br>business <br>Interesting!</h1>
+            </div>
+            <div class="sub__text">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse vero dolore.</p>
+                <button class="learn__more__btn">Learn More</button>
+            </div>
+
+        </div>
+    </main>
+    <div class="cards__section">
+        <div class="cards__container">
+            <div class="card">
+                <div class="icon">
+                    <img src="images/icons/icons8-verified-50.png" height="42px">
+                </div>
+                <div class="title">
+                    <p>Trusted</p>
+                </div>
+                <div class="description">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi id reiciendis</p>
+                </div>
+            </div>        
+            <div class="card">
+                <div class="icon">
+                    <img src="images/icons/icons8-verified-50.png" height="42px">
+                </div>
+                <div class="title">
+                    <p>Certified</p>
+                </div>
+                <div class="description">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi id reiciendis</p>
+                </div>
+            </div>        
+            <div class="card">
+                <div class="icon">
+                    <img src="images/icons/icons8-verified-50.png" height="42px">
+                </div>
+                <div class="title">
+                    <p>On Track</p>
+                </div>
+                <div class="description">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi id reiciendis</p>
+                </div>
+            </div>        
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var menuOpen = document.getElementById('hamburger-menu');
+        var menuClose = document.getElementById('hamburger-close');
+        var navBar = document.getElementById('nav__bar');
+
+        function showMenu(){
+            navBar.style.left = "0";
+            menuOpen.style.display = "none";
+            menuClose.style.display ="block";
+        }
+        function hideMenu(){
+            navBar.style.left = "-100%";
+            menuOpen.style.display = "block";
+            menuClose.style.display ="none";
+        }
+
+
+
+    </script>
+</body>
+</html>

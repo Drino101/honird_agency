@@ -1,0 +1,299 @@
+:root{
+    --primary-color: #612a8f;
+    --text-color-black: #100718;
+    --max-width: 1200px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", arial, sans-serif;
+    font-size: 16px;
+    padding: 80px 0;
+}
+.header{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 20px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 100;
+}
+.logo{
+    cursor: pointer;
+}
+.hamburger__menu, .hamburger__close{
+    height: 2rem;
+}
+nav{
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    height: calc(100vh - 80px);
+    width: 100%;
+    background: #fff;
+    transition: .5s;
+    z-index: 99;
+}
+.nav__links{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+    cursor: pointer;
+}
+.nav__links li{
+    position: relative;
+}
+.nav__links li a{
+    text-decoration: none;
+    color: var(--text-color-black);
+    transition: .5s;
+}
+.nav__links li a:hover, 
+.nav__links li a:active{
+    color: var(--primary-color);
+}
+.nav__links li::after{
+    content: "";
+    width: 0;
+    height: 1px;
+    background: var(--primary-color);
+    display: block;
+    margin: auto;
+    transition: .5s;
+    position: absolute;
+    bottom: -5px;
+}
+.nav__links li:hover::after{
+    width: 100%;
+}
+
+.hamburger__close{
+    display: none;
+    transition: .5s;
+}
+
+
+/* Hero Section */
+.section__container{
+    height: 100vh;
+    background: url(../images/pexels-fauxels-3184291.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 15rem 2rem 0 2rem;
+}
+.modal{
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.content__container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+.hero__text .heading{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.sub__text{
+    width: 80vw;
+}
+.sub__text p{
+    line-height: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+button{
+    background: #fff;
+    width: 80vw;
+    height: 50px;
+    border: none;
+    font-size: .8rem;
+    color: var(--primary-color);
+    align-self: center;
+    cursor: pointer;
+    transition: .5s;
+}
+button:hover{
+    color: #fff;
+    background: var(--primary-color);
+}
+.cards__section{
+    padding: 0 .5rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.cards__container{
+    position: absolute;
+    top: -4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.card{
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5rem;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,0.3);
+    padding: 0 1rem;
+
+}
+.card .icon{
+    background: var(--primary-color);
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4rem;
+    margin: 1.5rem auto;
+
+}
+.card .icon img{
+    border-radius: 50%;
+}
+.card .title{
+    margin-bottom: 2rem;
+}
+.card .title p{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.card .description{
+    margin-bottom: 2rem;
+}
+.card .description p{
+    color: #777;
+}
+
+
+@media(min-height: 890px){
+    .section__container{
+        padding: 25rem 2rem 0 2rem;
+    }
+}
+@media(min-width: 1200px){
+    nav{
+        position: relative;
+        background: transparent;
+        top: 0;
+        left: 0;
+        height: 50px;
+        width: 100%;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    .nav__links{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 1rem;
+        gap: 5rem;
+        padding: 0;
+    }
+    .hamburger__menu{
+        display: none;
+    }
+    .hamburger__close{
+        display: none;
+        transition: .5s;
+    }
+    .header{
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 8rem;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        z-index: 100;
+        
+    }
+    .content__container{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: #fff;
+        width: 80vw;
+        align-items: center;
+    }
+    .sub__text{
+        width: 300px;
+    }
+    button{
+        background: #fff;
+        width: 300px;
+        height: 50px;
+        border: none;
+        font-size: .8rem;
+        color: var(--primary-color);
+        align-self: center;
+    }
+    .section__container{
+        padding: 12rem 8rem;
+    }
+    .hero__text .heading{
+        margin-bottom: 2rem;
+        font-size: 4rem;
+    }
+    .cards__container{
+        flex-direction: row;
+        align-items: center;
+        gap: 6rem;
+    }
+    .card{
+        width: 300px;
+    }
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
